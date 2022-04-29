@@ -9,7 +9,10 @@
   }
   .box{
     animation: ease-in 1s fadein;
+    
+    
   }
+
 .icon{
     height: 1;
     animation: ease-out 1s slidBorder;

@@ -1,17 +1,17 @@
-import { Container, Button, Box, Link, Card, CardContent, Typography, Stack } from '@mui/material';
+import { Container, Button, Box, Link, Stack } from '@mui/material';
 import React from 'react';
 import CallIcon from '@mui/icons-material/Call';
 import LanguageIcon from '@mui/icons-material/Language';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import CategoryIcon from '@mui/icons-material/Category';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+// import LocationOnIcon from '@mui/icons-material/LocationOn';
 import IconButton from '@mui/material/IconButton';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import EmailIcon from '@mui/icons-material/Email';
+import Chip from '@mui/material/Chip';
 import '../Header/style.css';
 const Main = () => {
   const [checked, setChecked] = React.useState(true);
@@ -34,7 +34,7 @@ const Main = () => {
   };
   return (
     <ThemeProvider theme={theme}>
-      <Container maxWidth="lg" sx={{mb:5}}>
+      <Container maxWidth="lg" sx={{ mb: 5 }}>
         <Stack
           className="icon"
           direction="row"
@@ -43,14 +43,22 @@ const Main = () => {
           spacing={1}
           sx={{ maxWidth: 250 }}
         >
-          <IconButton color="third" aria-label="instagram" size="large">
-            <InstagramIcon sx={{ fontSize: 45 }} />
-          </IconButton>
+          <Link
+            href="https://www.instagram.com/fartakmedical/"
+            class="whatsapp_float"
+            target="_blank"
+            rel="noopener noreferrer"
+            underline="none"
+          >
+            <IconButton color="third" aria-label="instagram" size="large">
+              <InstagramIcon sx={{ fontSize: 45 }} />
+            </IconButton>
+          </Link>
           <IconButton color="third" aria-label="delete" size="large">
             <LinkedInIcon sx={{ fontSize: 45 }} />
           </IconButton>
           <Link
-            href="https://wa.me/1230000000"
+            href="https://wa.me/+989122191582"
             class="whatsapp_float"
             target="_blank"
             rel="noopener noreferrer"
@@ -84,7 +92,7 @@ const Main = () => {
                 borderRadius: 35,
               }}
               variant="contained"
-              endIcon={<LanguageIcon  sx={{fontSize: 28, ml: 1,float:'right'}} />}
+              endIcon={<LanguageIcon sx={{ fontSize: 28, ml: 1, float: 'right' }} />}
             >
               وب سایت
             </Button>
@@ -111,7 +119,7 @@ const Main = () => {
                 borderRadius: 35,
               }}
               variant="contained"
-              endIcon={<FileDownloadIcon sx={{fontSize: 28, ml: 1,float:'right'}} />}
+              endIcon={<FileDownloadIcon sx={{ fontSize: 28, ml: 1, float: 'right' }} />}
             >
               کاتـالــوگ
             </Button>
@@ -138,7 +146,7 @@ const Main = () => {
                 borderRadius: 35,
               }}
               variant="contained"
-              endIcon={<CategoryIcon sx={{fontSize: 28, ml: 1,float:'right'}} />}
+              endIcon={<CategoryIcon sx={{ fontSize: 28, ml: 1, float: 'right' }} />}
             >
               محصولات
             </Button>
@@ -167,13 +175,13 @@ const Main = () => {
                 borderRadius: 35,
               }}
               variant="contained"
-              endIcon={<CallIcon sx={{fontSize: 28, ml: 1,float:'right'}} />}
+              endIcon={<CallIcon sx={{ fontSize: 28, ml: 1, float: 'right' }} />}
             >
               تماس با ما
             </Button>
           </Link>
         </Box>
-        <Card
+        {/* <Card
           className="box"
           sx={{
             border: 2,
@@ -185,30 +193,55 @@ const Main = () => {
             borderRadius: 5,
             bgcolor: '#01a3a0',
           }}
-        >
-          <CardContent sx={{ position: 'relative' }}>
-            <Typography
-              fontFamily="MyWebFont-primary"
-              sx={{ fontSize: 21, float: 'right' }}
-              color="primary.txt"
-              gutterBottom
-            >
-              <LocationOnIcon  sx={{fontSize: 28, ml: 1,float:'right' }} />
-              آدرس : ستارخان،باقرخان غربی، پلاک 97
-              
-            </Typography>
-            <Typography
-              fontFamily="MyWebFont-primary"
-              sx={{ fontSize: 21, float: 'right',pb:1 }}
-              color="primary.txt"
-              gutterBottom
-            >
-               <EmailIcon sx={{ fontSize: 25, ml: 1,float:'right' }} />
-               info@fartakmedical.com
-             
-            </Typography>
-          </CardContent>
-        </Card>
+        > */}
+        <Chip
+          sx={{
+            boxShadow: 8,
+            borderColor: 'white',
+            borderBottom: '0',
+            borderLeft: 0,
+            maxWidth: 300,
+            mt: 2,
+            borderRadius: 8,
+            bgcolor: '#00c5c5',
+            p: 3.5,
+            fontFamily: 'MyWebFont-primary',
+            fontSize: 20,
+            color: '#fafafa',
+          }}
+          color="secondary"
+          className="box"
+          label=" آدرس : ستارخان،باقرخان غربی، پلاک 97 "
+          component="a"
+          href="https://goo.gl/maps/nv4R7gc8fKDCsUbG7"
+          target="_blank"
+          clickable
+        />
+
+        {/* <CardContent
+            sx={{
+              position: 'relative',
+            }}
+          >
+            <Link href="https://goo.gl/maps/MVn9RsF4oHxY4haAA" underline="none" target="_blank">
+              <Typography
+                fontFamily="MyWebFont-primary"
+                sx={{
+                  fontSize: 21,
+                  float: 'right',
+                  '&:hover': {
+                    color: '#01a3a0',
+                  },
+                }}
+                color="primary.txt"
+                gutterBottom
+              >
+                <LocationOnIcon sx={{ fontSize: 28, ml: 1, float: 'right' }} />
+                آدرس : ستارخان،باقرخان غربی، پلاک 97
+              </Typography>
+            </Link>
+          </CardContent> */}
+        {/* </Card> */}
       </Container>
     </ThemeProvider>
   );
