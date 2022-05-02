@@ -11,3 +11,7 @@
   font-family: 'MyWebFont-third' ;
   src: url('./asset/Font/AdobeHebrew-Bold.otf');
 }
+@font-face {
+  font-family: 'MyWebFont-four';
+  src: url('./asset/Font/AdobeArabic-Italic.otf');
+}

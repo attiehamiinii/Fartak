@@ -9,7 +9,6 @@ import CategoryIcon from '@mui/icons-material/Category';
 import IconButton from '@mui/material/IconButton';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Chip from '@mui/material/Chip';
 import '../Header/style.css';
@@ -54,9 +53,17 @@ const Main = () => {
               <InstagramIcon sx={{ fontSize: 45 }} />
             </IconButton>
           </Link>
-          <IconButton color="third" aria-label="delete" size="large">
-            <LinkedInIcon sx={{ fontSize: 45 }} />
-          </IconButton>
+          <Link
+            href="https://www.linkedin.com/company/fartakmedical/about/?viewAsMember=true"
+            class="whatsapp_float"
+            target="_blank"
+            rel="noopener noreferrer"
+            underline="none"
+          >
+            <IconButton color="third" aria-label="delete" size="large">
+              <LinkedInIcon sx={{ fontSize: 45 }} />
+            </IconButton>
+          </Link>
           <Link
             href="https://wa.me/+989122191582"
             class="whatsapp_float"
@@ -68,9 +75,6 @@ const Main = () => {
               <WhatsAppIcon sx={{ fontSize: 45 }} />
             </IconButton>
           </Link>
-          <IconButton color="third" aria-label="delete" size="large">
-            <FacebookIcon sx={{ fontSize: 45 }} />
-          </IconButton>
         </Stack>
         <Box sx={{ mt: 1.5 }}>
           <Link href="https://www.fartakmedical.com/" underline="none" target="_blank">
